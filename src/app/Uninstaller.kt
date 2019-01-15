@@ -7,7 +7,9 @@ import javafx.scene.control.ProgressBar
 import javafx.scene.control.ProgressIndicator
 import javafx.scene.control.TableView
 import javafx.scene.control.TextInputControl
+import java.io.BufferedWriter
 import java.io.IOException
+import java.io.OutputStreamWriter
 import java.util.*
 
 
@@ -152,5 +154,70 @@ class Uninstaller(var tv: TableView<App>, var progress: ProgressBar, var progres
         }
         t.isDaemon = true
         t.start()
+    }
+
+    fun freeze(func: () -> Unit) {
+        val undesirable = FXCollections.observableArrayList<App>()
+        if (tv.items.size != 0) {
+            for (app in tv.items)
+                if (app.selectedProperty().get())
+                    undesirable.add(app)
+            if (undesirable.size == 0)
+                return
+        } else return
+        val n = undesirable.size
+        tic?.text = ""
+        progressind.isVisible = true
+        t = Thread {
+            for (app in undesirable) {
+
+                arguments = ("adb shell su pm disable ${app.packagenameProperty().get()}").split(" ").toTypedArray()
+                arguments[0] = prefix + arguments[0]
+                print(arguments)
+                pb.command(arguments[0], arguments[1])
+                try {
+                    proc = pb.start()
+                    commandOut(app.packagenameProperty().get())
+                } catch (ex: IOException) {
+                    ex.printStackTrace()
+                }
+                scan = Scanner(proc.inputStream)
+                var line = ""
+                while (scan.hasNext())
+                    line += scan.nextLine() + System.lineSeparator()
+                if (line == "")
+                    line = "Failed!\n\tYou have no Root privileges"
+                scan.close()
+                Platform.runLater {
+                    tic?.appendText("App: ${app.appnameProperty().get()}${System.lineSeparator()}")
+                    tic?.appendText("Package: ${app.packagenameProperty().get()}${System.lineSeparator()}")
+                    tic?.appendText("Result: $line${System.lineSeparator()}")
+                    progress.progress += 1.0 / n
+                }
+            }
+            Platform.runLater {
+                tic?.appendText("Done!")
+                progress.progress = 0.0
+                progressind.isVisible = false
+                func()
+                createTable()
+            }
+        }
+        t.isDaemon = true
+        t.start()
+    }
+
+    private fun commandOut(pkg :String){
+        var p_stdin : BufferedWriter = BufferedWriter(OutputStreamWriter(proc.outputStream))
+        commandUpdate(p_stdin, "su")
+        commandUpdate(p_stdin, "pm disable ${pkg}")
+        commandUpdate(p_stdin, "exit")
+        commandUpdate(p_stdin, "exit")
+    }
+
+    private fun commandUpdate(p:BufferedWriter, comm:String){
+        p.write(comm)
+        p.newLine()
+        p.flush()
     }
 }
