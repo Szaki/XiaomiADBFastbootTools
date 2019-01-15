@@ -72,6 +72,8 @@ class MainWindowController : Initializable {
     @FXML
     private lateinit var uninstallButton: Button
     @FXML
+    private lateinit var freezeButton: Button
+    @FXML
     private lateinit var addButton: Button
     @FXML
     private lateinit var reboottwrpButton: Button
@@ -629,6 +631,32 @@ class MainWindowController : Initializable {
         when (device.mode) {
             1 -> if (checkADB()) comm.exec("adb reboot edl")
             2 -> if (checkFastboot()) comm.exec("fastboot oem edl")
+        }
+    }
+
+    @FXML
+    private fun freezeButtonPressed(event: ActionEvent) {
+        if (checkADB()) {
+            progressBar.progress = 0.0
+            uninstallerPane.isDisable = true
+            camera2Pane.isDisable = true
+            devicepropertiesPane.isDisable = true
+            dpiPane.isDisable = true
+            flasherPane.isDisable = true
+            wiperPane.isDisable = true
+            oemPane.isDisable = true
+            rebootMenu.isDisable = true
+            recoveryMenuItem.isDisable = true
+            uninstaller.freeze {               uninstallerPane.isDisable = false
+                camera2Pane.isDisable = false
+                devicepropertiesPane.isDisable = false
+                dpiPane.isDisable = device.recovery
+                flasherPane.isDisable = true
+                wiperPane.isDisable = true
+                oemPane.isDisable = true
+                rebootMenu.isDisable = false
+                recoveryMenuItem.isDisable = false
+            }
         }
     }
 
