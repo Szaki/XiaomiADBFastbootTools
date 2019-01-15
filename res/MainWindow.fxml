@@ -21,11 +21,12 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainWindowController">
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainWindowController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -181,11 +182,16 @@
                                                          <font>
                                                             <Font size="14.0" />
                                                          </font></TextField>
-                                                      <Button fx:id="uninstallButton" mnemonicParsing="false" onAction="#uninstallButtonPressed" prefWidth="537.0" text="Uninstall!" textFill="RED" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
-                                                         <font>
-                                                            <Font size="16.0" />
-                                                         </font>
-                                                      </Button>
+                                                      <Pane GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="frezeButton" alignment="CENTER" layoutX="323.0" mnemonicParsing="false" onAction="#freezeButtonPressed" prefHeight="35.0" prefWidth="144.0" text="Freeze!" textFill="GREEN" />
+                                                            <Button fx:id="uninstallButton" alignment="CENTER" contentDisplay="CENTER" layoutX="37.0" layoutY="-1.0" mnemonicParsing="false" onAction="#uninstallButtonPressed" prefHeight="37.0" prefWidth="176.0" text="Uninstall!" textFill="RED">
+                                                               <font>
+                                                                  <Font size="16.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </Pane>
                                                       <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonPressed" text="Add" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
                                                          <font>
                                                             <Font size="16.0" />
