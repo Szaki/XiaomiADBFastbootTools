@@ -129,7 +129,7 @@ class XiaomiADBFastbootTools : Application() {
         stage.title = "Xiaomi ADB/Fastboot Tools"
         stage.icons.add(Image("icon.png"))
         stage.show()
-        stage.isResizable = false
+        stage.isResizable = true
         checkVersion()
         if (!File(tmp, "adb").exists() && !File(tmp, "adb.exe").exists()) {
             val alert = Alert(Alert.AlertType.ERROR)
