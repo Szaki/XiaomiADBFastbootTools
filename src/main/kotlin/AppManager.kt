@@ -34,6 +34,7 @@ class AppManager : Command() {
             "DiagLogger;com.huaqin.diaglogger",
             "Downloads;com.android.providers.downloads.ui",
             "Facebook;com.facebook.system,com.facebook.appmanager,com.facebook.services",
+            "Facemoji Keyboard for Xiaomi;com.facemoji.lite.xiaomi",
             "Feedback;com.miui.bugreport",
             "FM Radio;com.miui.fm",
             "Freeform;com.miui.freeform",
