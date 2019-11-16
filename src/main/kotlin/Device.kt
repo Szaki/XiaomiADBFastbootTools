@@ -79,7 +79,7 @@ object Device {
         }
         props.clear()
         command.exec("fastboot getvar all").lineSequence().forEach {
-            if (it[0] == '(')
+            if (it.startsWith('('))
                 props[it.substringAfter(')').substringBeforeLast(':').trim()] = it.substringAfterLast(':').trim()
         }
         if (props["serialno"].isNullOrEmpty() || props["product"].isNullOrEmpty()) {
