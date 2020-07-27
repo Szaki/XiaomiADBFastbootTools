@@ -105,6 +105,7 @@ com.miui.yellowpage: Yellow Pages
 com.netflix.partner.activation: PartnerNetflixActivation
 com.qisiemoji.inputmethod: Kika Keyboard
 com.tencent.soter.soterserver: SoterService
+com.tencent.mtt: QQ Browser
 com.xiaomi.ab: MAB
 com.xiaomi.calendar: Mi Calendar
 com.xiaomi.discover: System Apps Updater
@@ -123,3 +124,4 @@ com.xiaomi.simactivate.service: Xiaomi SIM Activate Service
 com.xiaomi.vipaccount: Xiaomi VIP Account
 com.xiaomi.xmsf: Xiaomi Service Framework
 com.xiaomi.xmsfkeeper: Xiaomi Service Framework
+com.xiaomi.jr: Mi Financial
