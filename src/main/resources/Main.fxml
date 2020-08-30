@@ -24,7 +24,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <GridPane prefWidth="1280.0" prefHeight="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -106,7 +105,7 @@
                   </TitledPane>
                   <TitledPane animated="false" collapsible="false" maxHeight="1.7976931348623157E308" text="Status" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
                      <content>
-                        <GridPane>
+                        <GridPane hgap="8.0" vgap="8.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="ALWAYS" />
                               <ColumnConstraints />
@@ -117,7 +116,7 @@
                            </rowConstraints>
                            <children>
                               <ProgressBar fx:id="progressBar" maxWidth="1.7976931348623157E308" progress="0.0" />
-                              <ProgressIndicator fx:id="progressIndicator" visible="false" GridPane.columnIndex="1" />
+                              <ProgressIndicator fx:id="progressIndicator" prefHeight="23.0" prefWidth="23.0" visible="false" GridPane.columnIndex="1" />
                               <TextArea fx:id="outputTextArea" editable="false" GridPane.columnSpan="2" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
