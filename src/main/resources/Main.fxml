@@ -20,11 +20,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<GridPane prefWidth="1280.0" prefHeight="720.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
+<GridPane hgap="8.0" prefWidth="1280.0" prefHeight="720.0" vgap="8.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -135,8 +136,8 @@
                            <children>
                               <GridPane layoutX="179.0" layoutY="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columnConstraints>
-                                    <ColumnConstraints percentWidth="70.0" />
-                                    <ColumnConstraints percentWidth="30.0" />
+                                    <ColumnConstraints percentWidth="60.0" />
+                                    <ColumnConstraints percentWidth="40.0" />
                                  </columnConstraints>
                                  <rowConstraints>
                                     <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
@@ -276,26 +277,30 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0">
                                                    <children>
-                                                      <Button fx:id="enableCamera2Button" layoutX="64.0" layoutY="65.0" mnemonicParsing="false" onAction="#enableCamera2ButtonPressed" text="Enable Camera2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Button fx:id="disableCamera2Button" layoutX="62.0" layoutY="115.0" mnemonicParsing="false" onAction="#disableCamera2ButtonPressed" text="Disable Camera2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Button fx:id="enableEISButton" layoutX="14.0" layoutY="145.0" mnemonicParsing="false" onAction="#enableEISButtonPressed" text="Enable EIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="72.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Button fx:id="disableEISButton" layoutX="73.0" layoutY="203.0" mnemonicParsing="false" onAction="#disableEISButtonPressed" text="Disable EIS" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="108.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
+                                                      <VBox layoutX="12.0" layoutY="12.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Button fx:id="enableCamera2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableCamera2ButtonPressed" text="Enable Camera2">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button fx:id="disableCamera2Button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableCamera2ButtonPressed" text="Disable Camera2">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button fx:id="enableEISButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableEISButtonPressed" text="Enable EIS">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button fx:id="disableEISButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableEISButtonPressed" text="Disable EIS">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
                                                    </children>
                                                 </AnchorPane>
                                             </content>
@@ -307,11 +312,15 @@
                                              <content>
                                                 <AnchorPane>
                                                    <children>
-                                                      <Button fx:id="openButton" mnemonicParsing="false" onAction="#openButtonPressed" text="Open" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
+                                                      <VBox layoutX="12.0" layoutY="12.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <Button fx:id="openButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#openButtonPressed" text="Open">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
@@ -323,31 +332,39 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0">
                                                    <children>
-                                                      <Label layoutX="14.0" layoutY="15.0" text="Value:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="dpiTextField" layoutX="64.0" layoutY="10.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="-3.0">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </TextField>
-                                                      <Label layoutX="136.0" layoutY="14.0" text="dpi" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Button fx:id="applyDpiButton" layoutX="56.0" layoutY="69.0" mnemonicParsing="false" onAction="#applyDpiButtonPressed" text="Apply" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="33.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Button fx:id="resetDpiButton" mnemonicParsing="false" onAction="#resetDpiButtonPressed" text="Reset to default" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
+                                                      <VBox layoutX="12.0" layoutY="9.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox spacing="8.0">
+                                                               <children>
+                                                                  <Label minWidth="60.0" text="Value:">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <TextField fx:id="dpiTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label minWidth="30.0" text="dpi">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <Button fx:id="applyDpiButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyDpiButtonPressed" text="Apply">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button fx:id="resetDpiButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetDpiButtonPressed" text="Reset to default">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
                                                    </children>
                                                 </AnchorPane>
                                             </content>
@@ -359,46 +376,58 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0">
                                                    <children>
-                                                      <Label layoutX="14.0" layoutY="15.0" text="Width:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="widthTextField" layoutX="64.0" layoutY="10.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="-3.0">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </TextField>
-                                                      <Label layoutX="136.0" layoutY="14.0" text="px" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Button fx:id="applyResButton" layoutX="56.0" layoutY="69.0" mnemonicParsing="false" onAction="#applyResButtonPressed" text="Apply" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="69.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Button fx:id="resetResButton" mnemonicParsing="false" onAction="#resetResButtonPressed" text="Reset to default" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="105.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Button>
-                                                      <Label layoutX="22.0" layoutY="54.0" text="Height:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="36.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <TextField fx:id="heightTextField" layoutX="30.0" layoutY="50.0" AnchorPane.leftAnchor="65.0" AnchorPane.rightAnchor="37.0" AnchorPane.topAnchor="33.0">
-                                                         <font>
-                                                            <Font size="14.0" />
-                                                         </font>
-                                                      </TextField>
-                                                      <Label layoutX="185.0" layoutY="59.0" text="px" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="36.0">
-                                                         <font>
-                                                            <Font size="15.0" />
-                                                         </font>
-                                                      </Label>
+                                                      <VBox layoutX="12.0" layoutY="9.0" spacing="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <HBox spacing="8.0">
+                                                               <children>
+                                                                  <Label minWidth="60.0" text="Width:">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <TextField fx:id="widthTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label minWidth="30.0" text="px">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox spacing="8.0">
+                                                               <children>
+                                                                  <Label minWidth="60.0" text="Height:">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <TextField fx:id="heightTextField" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font size="14.0" />
+                                                                     </font>
+                                                                  </TextField>
+                                                                  <Label minWidth="30.0" text="px">
+                                                                     <font>
+                                                                        <Font size="15.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </HBox>
+                                                            <Button fx:id="applyResButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#applyResButtonPressed" text="Apply">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Button fx:id="resetResButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#resetResButtonPressed" text="Reset to default">
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </Button>
+                                                         </children>
+                                                      </VBox>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
