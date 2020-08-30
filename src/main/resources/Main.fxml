@@ -558,16 +558,27 @@
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0">
                                              <children>
-                                                <Button fx:id="lockButton" mnemonicParsing="false" onAction="#lockButtonPressed" text="Lock" textFill="RED" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="17.0" />
-                                                   </font>
-                                                </Button>
-                                                <Button fx:id="unlockButton" mnemonicParsing="false" onAction="#unlockButtonPressed" text="Unlock" textFill="#00c800" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="17.0" />
-                                                   </font>
-                                                </Button>
+                                                <GridPane hgap="32.0" layoutX="59.0" layoutY="12.0" vgap="16.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints percentWidth="50.0" />
+                                                      <ColumnConstraints percentWidth="50.0" />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="lockButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#lockButtonPressed" text="Lock" textFill="RED" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="unlockButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#unlockButtonPressed" text="Unlock" textFill="#00c800">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </GridPane>
                                              </children>
                                           </AnchorPane>
                                       </content>
