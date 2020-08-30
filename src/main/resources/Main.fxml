@@ -19,7 +19,6 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
@@ -422,8 +421,8 @@
                            <children>
                               <GridPane hgap="8.0" vgap="8.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                                  <columnConstraints>
-                                    <ColumnConstraints />
-                                    <ColumnConstraints />
+                                    <ColumnConstraints percentWidth="70.0" />
+                                    <ColumnConstraints percentWidth="30.0" />
                                  </columnConstraints>
                                  <rowConstraints>
                                     <RowConstraints />
@@ -590,51 +589,46 @@
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0">
                                              <children>
-                                                <GridPane layoutX="12.800000190734863" layoutY="12.800000190734863" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <GridPane hgap="32.0" layoutX="12.800000190734863" layoutY="12.800000190734863" vgap="16.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                                                    <columnConstraints>
-                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" />
-                                                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" prefWidth="230.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="45.0" valignment="CENTER" vgrow="SOMETIMES" />
-                                                      <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="35.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                                      <RowConstraints percentHeight="33.0" />
+                                                      <RowConstraints percentHeight="33.0" />
+                                                      <RowConstraints percentHeight="33.0" />
                                                    </rowConstraints>
                                                    <children>
-                                                      <FlowPane hgap="25.0" GridPane.columnSpan="2">
-                                                         <children>
-                                                            <TextField fx:id="codenameTextField" promptText="Codename">
-                                                               <font>
-                                                                  <Font size="14.0" />
-                                                               </font>
-                                                            </TextField>
-                                                            <ComboBox fx:id="branchComboBox" prefWidth="175.0" promptText="Branch" />
-                                                            <Button fx:id="getlinkButton" mnemonicParsing="false" onAction="#getlinkButtonPressed" prefWidth="100.0" text="Get link">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                            <Button fx:id="downloadromButton" mnemonicParsing="false" onAction="#downloadromButtonPressed" prefWidth="229.0" text="Download ROM">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <FlowPane hgap="10.0" GridPane.rowIndex="1">
-                                                         <children>
-                                                            <Label text="Latest version:">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="versionLabel" text="-">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <Label fx:id="downloadProgress" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                                      <TextField fx:id="codenameTextField" promptText="Codename">
+                                                         <font>
+                                                            <Font size="14.0" />
+                                                         </font>
+                                                      </TextField>
+                                                      <ComboBox fx:id="branchComboBox" maxWidth="1.7976931348623157E308" promptText="Branch" GridPane.columnIndex="1" />
+                                                      <Button fx:id="getlinkButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#getlinkButtonPressed" text="Get link" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="downloadromButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#downloadromButtonPressed" text="Download ROM" GridPane.columnIndex="3">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Label fx:id="versionLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="Latest version:" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="downloadProgress" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
                                                          <font>
                                                             <Font size="16.0" />
                                                          </font>
