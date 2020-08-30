@@ -435,95 +435,78 @@
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0">
                                              <children>
-                                                <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <GridPane hgap="32.0" vgap="32.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                                                    <columnConstraints>
-                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
+                                                      <ColumnConstraints percentWidth="25.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="45.0" valignment="CENTER" vgrow="ALWAYS" />
-                                                      <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="45.0" valignment="CENTER" vgrow="ALWAYS" />
-                                                      <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="35.0" valignment="CENTER" vgrow="ALWAYS" />
-                                                      <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="45.0" valignment="CENTER" vgrow="ALWAYS" />
-                                                      <RowConstraints fillHeight="false" minHeight="-Infinity" prefHeight="35.0" valignment="CENTER" vgrow="ALWAYS" />
+                                                      <RowConstraints />
+                                                      <RowConstraints />
+                                                      <RowConstraints />
+                                                      <RowConstraints />
+                                                      <RowConstraints />
                                                    </rowConstraints>
                                                    <children>
-                                                      <FlowPane hgap="130.0">
-                                                         <children>
-                                                            <Button fx:id="antirbButton" mnemonicParsing="false" onAction="#antirbButtonPressed" text="Disable anti-rollback safeguard">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                            <CheckBox fx:id="autobootCheckBox" mnemonicParsing="false" text="Autoboot to Recovery after it's flashed">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </CheckBox>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <FlowPane hgap="25.0" GridPane.rowIndex="1">
-                                                         <children>
-                                                            <Button fx:id="browseimageButton" mnemonicParsing="false" onAction="#browseimageButtonPressed" prefWidth="160.0" text="Select image">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                            <ComboBox fx:id="partitionComboBox" editable="true" prefWidth="175.0" promptText="Partition" />
-                                                            <Button fx:id="flashimageButton" mnemonicParsing="false" onAction="#flashimageButtonPressed" prefWidth="160.0" text="Flash image" textFill="RED">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                            <Button fx:id="bootButton" mnemonicParsing="false" onAction="#bootButtonPressed" prefWidth="160.0" text="Boot to image">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <FlowPane hgap="10.0" GridPane.rowIndex="2">
-                                                         <children>
-                                                            <Label text="Image:">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="imageLabel" text="-">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <FlowPane hgap="10.0" GridPane.rowIndex="4">
-                                                         <children>
-                                                            <Label text="ROM:">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                            <Label fx:id="romLabel" text="-">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Label>
-                                                         </children>
-                                                      </FlowPane>
-                                                      <FlowPane hgap="25.0" GridPane.rowIndex="3">
-                                                         <children>
-                                                            <Button fx:id="browseromButton" mnemonicParsing="false" onAction="#browseromButtonPressed" prefWidth="160.0" text="Select ROM folder">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                            <ComboBox fx:id="scriptComboBox" prefWidth="175.0" promptText="Method" />
-                                                            <Button fx:id="flashromButton" mnemonicParsing="false" onAction="#flashromButtonPressed" prefWidth="160.0" text="Flash ROM" textFill="RED">
-                                                               <font>
-                                                                  <Font size="15.0" />
-                                                               </font>
-                                                            </Button>
-                                                         </children>
-                                                      </FlowPane>
+                                                      <Button fx:id="antirbButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#antirbButtonPressed" text="Disable anti-rollback safeguard" GridPane.columnSpan="2">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <CheckBox fx:id="autobootCheckBox" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Autoboot to Recovery after it's flashed" GridPane.columnIndex="2" GridPane.columnSpan="2">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </CheckBox>
+                                                      <Button fx:id="browseimageButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#browseimageButtonPressed" text="Select image" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <ComboBox fx:id="partitionComboBox" editable="true" maxWidth="1.7976931348623157E308" promptText="Partition" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                      <Button fx:id="flashimageButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#flashimageButtonPressed" text="Flash image" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="bootButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#bootButtonPressed" text="Boot to image" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Label text="Image:" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="imageLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label text="ROM:" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="romLabel" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="browseromButton" mnemonicParsing="false" onAction="#browseromButtonPressed" prefWidth="160.0" text="Select ROM folder" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <ComboBox fx:id="scriptComboBox" prefWidth="175.0" promptText="Method" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                      <Button fx:id="flashromButton" mnemonicParsing="false" onAction="#flashromButtonPressed" prefWidth="160.0" text="Flash ROM" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                      </Button>
                                                    </children>
                                                 </GridPane>
                                              </children>
