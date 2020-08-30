@@ -435,7 +435,7 @@
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0">
                                              <children>
-                                                <GridPane hgap="32.0" vgap="32.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                <GridPane hgap="32.0" vgap="16.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
                                                    <columnConstraints>
                                                       <ColumnConstraints percentWidth="25.0" />
                                                       <ColumnConstraints percentWidth="25.0" />
@@ -443,11 +443,11 @@
                                                       <ColumnConstraints percentWidth="25.0" />
                                                    </columnConstraints>
                                                    <rowConstraints>
-                                                      <RowConstraints />
-                                                      <RowConstraints />
-                                                      <RowConstraints />
-                                                      <RowConstraints />
-                                                      <RowConstraints />
+                                                      <RowConstraints percentHeight="20.0" />
+                                                      <RowConstraints percentHeight="20.0" />
+                                                      <RowConstraints percentHeight="20.0" />
+                                                      <RowConstraints percentHeight="20.0" />
+                                                      <RowConstraints percentHeight="20.0" />
                                                    </rowConstraints>
                                                    <children>
                                                       <Button fx:id="antirbButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#antirbButtonPressed" text="Disable anti-rollback safeguard" GridPane.columnSpan="2">
@@ -520,21 +520,33 @@
                                       <content>
                                         <AnchorPane minHeight="0.0" minWidth="0.0">
                                              <children>
-                                                <Button fx:id="cacheButton" mnemonicParsing="false" onAction="#cacheButtonPressed" text="Wipe cache" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="17.0" />
-                                                   </font>
-                                                </Button>
-                                                <Button fx:id="dataButton" mnemonicParsing="false" onAction="#dataButtonPressed" text="Wipe userdata" textFill="RED" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="17.0" />
-                                                   </font>
-                                                </Button>
-                                                <Button fx:id="cachedataButton" mnemonicParsing="false" onAction="#cachedataButtonPressed" text="Wipe cache and userdata" textFill="RED" AnchorPane.leftAnchor="305.0" AnchorPane.topAnchor="0.0">
-                                                   <font>
-                                                      <Font size="17.0" />
-                                                   </font>
-                                                </Button>
+                                                <GridPane hgap="32.0" layoutX="12.0" layoutY="12.0" vgap="16.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints />
+                                                      <ColumnConstraints />
+                                                      <ColumnConstraints />
+                                                   </columnConstraints>
+                                                   <rowConstraints>
+                                                      <RowConstraints />
+                                                   </rowConstraints>
+                                                   <children>
+                                                      <Button fx:id="cacheButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cacheButtonPressed" text="Wipe cache">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="dataButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#dataButtonPressed" text="Wipe userdata" textFill="RED" GridPane.columnIndex="1">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Button>
+                                                      <Button fx:id="cachedataButton" mnemonicParsing="false" onAction="#cachedataButtonPressed" text="Wipe cache and userdata" textFill="RED" GridPane.columnIndex="2">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Button>
+                                                   </children>
+                                                </GridPane>
                                              </children>
                                           </AnchorPane>
                                       </content>
