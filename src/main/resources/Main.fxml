@@ -4,6 +4,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.CheckMenuItem?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -165,6 +166,14 @@
                                                                 <TableColumn fx:id="unappTableColumn" editable="false" prefWidth="205.0" text="App name" />
                                                                   <TableColumn fx:id="unpackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
                                                               </columns>
+                                                               <contextMenu>
+                                                                  <ContextMenu>
+                                                                    <items>
+                                                                      <MenuItem fx:id="uninstallerCopyAppNameMenuItem" mnemonicParsing="false" onAction="#uninstallerCopyAppNameMenuItemPressed" text="Copy app name" />
+                                                                        <MenuItem fx:id="uninstallerCopyPackageNameMenuItem" mnemonicParsing="false" onAction="#uninstallerCopyPackageNameMenuItemPressed" text="Copy package name" />
+                                                                    </items>
+                                                                  </ContextMenu>
+                                                               </contextMenu>
                                                             </TableView>
                                                             <Button fx:id="uninstallButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#uninstallButtonPressed" text="Uninstall!" textFill="RED" GridPane.rowIndex="1">
                                                                <font>
@@ -196,6 +205,14 @@
                                                                   <TableColumn fx:id="reappTableColumn" editable="false" prefWidth="205.0" text="App name" />
                                                                   <TableColumn fx:id="repackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
                                                                </columns>
+                                                               <contextMenu>
+                                                                  <ContextMenu>
+                                                                     <items>
+                                                                        <MenuItem fx:id="reinstallerCopyAppNameMenuItem" mnemonicParsing="false" onAction="#reinstallerCopyAppNameMenuItemPressed" text="Copy app name" />
+                                                                        <MenuItem fx:id="reinstallerCopyPackageNameMenuItem" mnemonicParsing="false" onAction="#reinstallerCopyPackageNameMenuItemPressed" text="Copy package name" />
+                                                                     </items>
+                                                                  </ContextMenu>
+                                                               </contextMenu>
                                                             </TableView>
                                                             <Button fx:id="reinstallButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#reinstallButtonPressed" text="Reinstall!" textFill="#00c800" GridPane.rowIndex="1">
                                                                <font>
@@ -227,6 +244,14 @@
                                                                   <TableColumn fx:id="disappTableColumn" editable="false" prefWidth="205.0" text="App name" />
                                                                   <TableColumn fx:id="dispackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
                                                                </columns>
+                                                               <contextMenu>
+                                                                  <ContextMenu>
+                                                                     <items>
+                                                                        <MenuItem fx:id="disablerCopyAppNameMenuItem" mnemonicParsing="false" onAction="#disablerCopyAppNameMenuItemPressed" text="Copy app name" />
+                                                                        <MenuItem fx:id="disablerCopyPackageNameMenuItem" mnemonicParsing="false" onAction="#disablerCopyPackageNameMenuItemPressed" text="Copy package name" />
+                                                                     </items>
+                                                                  </ContextMenu>
+                                                               </contextMenu>
                                                             </TableView>
                                                             <Button fx:id="disableButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#disableButtonPressed" text="Disable!" textFill="RED" GridPane.rowIndex="1">
                                                                <font>
@@ -258,6 +283,14 @@
                                                                   <TableColumn fx:id="enappTableColumn" editable="false" prefWidth="205.0" text="App name" />
                                                                   <TableColumn fx:id="enpackageTableColumn" editable="false" prefWidth="310.0" text="Package name" />
                                                                </columns>
+                                                               <contextMenu>
+                                                                  <ContextMenu>
+                                                                     <items>
+                                                                        <MenuItem fx:id="enablerCopyAppNameMenuItem" mnemonicParsing="false" onAction="#enablerCopyAppNameMenuItemPressed" text="Copy app name" />
+                                                                        <MenuItem fx:id="enablerCopyPackageNameMenuItem" mnemonicParsing="false" onAction="#enablerCopyPackageNameMenuItemPressed" text="Copy package name" />
+                                                                     </items>
+                                                                  </ContextMenu>
+                                                               </contextMenu>
                                                             </TableView>
                                                             <Button fx:id="enableButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enableButtonPressed" text="Enable!" textFill="#00c800" GridPane.rowIndex="1">
                                                                <font>

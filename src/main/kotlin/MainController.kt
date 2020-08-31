@@ -64,13 +64,37 @@ class MainController : Initializable {
     private lateinit var uninstallerTableView: TableView<App>
 
     @FXML
+    private lateinit var uninstallerCopyAppNameMenuItem : MenuItem
+
+    @FXML
+    private lateinit var uninstallerCopyPackageNameMenuItem : MenuItem
+
+    @FXML
     private lateinit var reinstallerTableView: TableView<App>
+
+    @FXML
+    private lateinit var reinstallerCopyAppNameMenuItem : MenuItem
+
+    @FXML
+    private lateinit var reinstallerCopyPackageNameMenuItem : MenuItem
 
     @FXML
     private lateinit var disablerTableView: TableView<App>
 
     @FXML
+    private lateinit var disablerCopyAppNameMenuItem : MenuItem
+
+    @FXML
+    private lateinit var disablerCopyPackageNameMenuItem : MenuItem
+
+    @FXML
     private lateinit var enablerTableView: TableView<App>
+
+    @FXML
+    private lateinit var enablerCopyAppNameMenuItem : MenuItem
+
+    @FXML
+    private lateinit var enablerCopyPackageNameMenuItem : MenuItem
 
     @FXML
     private lateinit var uncheckTableColumn: TableColumn<App, Boolean>
@@ -1264,5 +1288,68 @@ class MainController : Initializable {
             isResizable = false
             showAndWait()
         }
+    }
+
+    @FXML
+    private fun uninstallerCopyAppNameMenuItemPressed(event: ActionEvent) {
+        copyAppName(uninstallerTableView)
+    }
+
+    @FXML
+    private fun uninstallerCopyPackageNameMenuItemPressed(event: ActionEvent) {
+        copyPackageName(uninstallerTableView)
+    }
+
+    @FXML
+    private fun reinstallerCopyAppNameMenuItemPressed(event: ActionEvent) {
+        copyAppName(reinstallerTableView)
+    }
+
+    @FXML
+    private fun reinstallerCopyPackageNameMenuItemPressed(event: ActionEvent) {
+        copyPackageName(reinstallerTableView)
+    }
+
+    @FXML
+    private fun disablerCopyAppNameMenuItemPressed(event: ActionEvent) {
+        copyAppName(disablerTableView)
+    }
+
+    @FXML
+    private fun disablerCopyPackageNameMenuItemPressed(event: ActionEvent) {
+        copyPackageName(disablerTableView)
+    }
+
+    @FXML
+    private fun enablerCopyAppNameMenuItemPressed(event: ActionEvent) {
+        copyAppName(enablerTableView)
+    }
+
+    @FXML
+    private fun enablerCopyPackageNameMenuItemPressed(event: ActionEvent) {
+        copyPackageName(enablerTableView)
+    }
+
+    private fun copyAppName(tableView: TableView<App>) {
+        val selectedItem = tableView.selectionModel.selectedItem
+
+        if (selectedItem != null) {
+            setClipboardValue(selectedItem.appnameProperty().value)
+        }
+    }
+
+    private fun copyPackageName(tableView: TableView<App>) {
+        val selectedItem = tableView.selectionModel.selectedItem
+
+        if (selectedItem != null) {
+            setClipboardValue(selectedItem.packagenameProperty().value)
+        }
+    }
+
+    private fun setClipboardValue(value: String) {
+        val toolkit = Toolkit.getDefaultToolkit()
+        val clipboard = toolkit.systemClipboard
+        val stringSelection = StringSelection(value)
+        clipboard.setContents(stringSelection, stringSelection)
     }
 }
