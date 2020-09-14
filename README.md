@@ -101,7 +101,7 @@ There are some apps Global MIUI doesn't let you uninstall but Chinese MIUI does.
 
 ### Why does the Uninstaller fail to uninstall some apps?
 
-If the attempted uninstallation of an application results in a failure or anything other than success, that isn't a bug or an issue within the program. It means that ADB was not able to uninstall the application and there is nothing we can be do about it. Similary, if an uninstallation has no result at all (neither success nor failure), that means that ADB didn't report anything, therefore the program cannot derive any information about the successfulness of the uninstallation.
+If the attempted uninstallation of an application results in a failure or anything other than success, that isn't a bug or an issue within the program. It means that ADB was not able to uninstall the application and there is nothing we can do about it. Similary, if an uninstallation has no result at all (neither success nor failure), that means that ADB didn't report anything, therefore the program cannot derive any information about the successfulness of the uninstallation.
 
 ### How do I regain uninstalled system apps?
 
