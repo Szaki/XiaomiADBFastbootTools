@@ -55,6 +55,13 @@
 
 ## FAQ & Troubleshooting
 
+### How to run the application or jar file?
+
+To run the downloaded application or jar file, open terminal and then type in the following command after switching your directory to file location -
+```
+java -jar XiaomiADBFastbootTools.jar
+```
+
 ### The application doesn't work. Is there anything I should have installed?
 
 Yes, the Xiaomi ADB/Fastboot Tools was developed in Kotlin for the Java Virtual Machine so it needs the JRE to run, **version 11 or later**.
